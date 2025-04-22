@@ -1,4 +1,6 @@
 import { FC, useEffect, useState, useRef, useCallback } from 'react';
+import { Todo } from 'shared/types';
+import useTodoStore from 'app/store/useTodoStore';
 import {
   StyledSearchInput,
   StyledTable,
@@ -6,7 +8,6 @@ import {
   StyledTableHeader,
   TableWrapper,
 } from './TodoTable.styles';
-import useTodoStore, { Todo } from '../../app/store/useTodoStore';
 
 const TodoTable: FC = () => {
   const { allTodos, loading, error, fetchTodos } = useTodoStore();

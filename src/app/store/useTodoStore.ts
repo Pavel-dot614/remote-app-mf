@@ -1,18 +1,5 @@
 import { create } from 'zustand';
-
-export interface Todo {
-  userId: number;
-  id: number;
-  title: string;
-  completed: boolean;
-}
-
-interface TodoState {
-  allTodos: Todo[];
-  loading: boolean;
-  error: string | null;
-  fetchTodos: () => Promise<void>;
-}
+import { Todo, TodoState } from 'shared/types';
 
 const useTodoStore = create<TodoState>(set => ({
   allTodos: [],
