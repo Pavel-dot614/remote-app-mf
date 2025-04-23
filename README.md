@@ -1,46 +1,79 @@
-# Getting Started with Create React App
+# My Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Технологии
 
-## Available Scripts
+- **React:** JavaScript библиотека для создания пользовательских интерфейсов.
+- **TypeScript:** Надстройка над JavaScript, добавляющая строгую типизацию.
+- **Styled Components:** Библиотека для написания CSS-in-JS.
+- **Ant Design:** UI библиотека для React.
+- **Zustand:** Простое и быстрое решение для управления состоянием.
+- **Webpack Module Federation:** Для создания микрофронтендов.
+- **Jest:** Фреймворк для unit тестирования.
+- **React Testing Library:** Библиотека для тестирования React компонентов.
+- **Playwright:** Фреймворк для e2e тестирования.
+- **ESLint:** Линтер для JavaScript и TypeScript.
+- **Prettier:** Форматировщик кода.
+- **Husky:** Для настройки Git hooks.
 
-In the project directory, you can run:
+## Быстрый старт
 
-### `npm start`
+1.  **Клонируйте репозиторий:**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    ```bash
+    git clone https://github.com/Pavel-dot614/host-app-mf.git
+    ```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+2.  **Установите зависимости:**
 
-### `npm test`
+    ```bash
+    npm install
+    ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3.  **Запустите приложение в режиме разработки:**
 
-### `npm run build`
+    ```bash
+    npm start
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4.  **Запустите Storybook:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    ```bash
+    npm run storybook
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5.  **Запустите Unit тесты:**
 
-### `npm run eject`
+    ```bash
+    npm test
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+6.  **Запустите E2E тесты:**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```bash
+    npm playwright test
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Микрофронтенды (Webpack Module Federation)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+В этом проекте микрофронтенды реализованы с использованием Webpack Module Federation. Это позволяет разделить приложение на независимо развертываемые части, которые могут быть разработаны и развернуты разными командами.
 
-## Learn More
+### Архитектура микрофронтендов
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Приложение состоит из следующих микрофронтендов:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1.  **Container (Контейнер):** Основное приложение, которое динамически загружает другие микрофронтенды. Оно предоставляет общую структуру приложения, навигацию и общие сервисы.
+2.  **Todo Table (Таблица Todo):** Микрофронтенд, отвечающий за отображение таблицы Todo. Он может быть разработан и развернут независимо от других частей приложения.
+
+### Webpack Module Federation Configuration
+
+Каждый микрофронтенд имеет свою собственную конфигурацию Webpack, которая определяет, какие модули он предоставляет другим микрофронтендам, и какие модули он потребляет из других микрофронтендов.
+
+## Тестирование
+
+## Code Style
+
+В проекте используется ESLint и Prettier для обеспечения единого стиля кодирования. Перед коммитом кода автоматически запускаются линтеры и форматировщики, чтобы исправить все ошибки и привести код к единому стилю.
+
+## Авторы
+
+- [Pavel](https://github.com/Pavel-dot614)
