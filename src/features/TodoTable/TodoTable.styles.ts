@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const StyledTableContainer = styled.div`
-  height: 500px;
-  max-width: 700px;
+  height: 70vh;
+  max-width: 80%;
   overflow: auto;
 `;
 
@@ -28,9 +28,8 @@ export const StyledTableHeader = styled.thead`
 `;
 
 export const StyledSearchInput = styled.input`
-  width: 100%;
+  width: 50%;
   padding: 10px;
-  width: 500px;
   margin-top: 50px;
   border: 1px solid #ccc;
   border-radius: 4px;

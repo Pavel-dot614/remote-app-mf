@@ -1,6 +1,8 @@
 import { FC, useEffect, useState, useRef, useCallback } from 'react';
+
 import { Todo } from 'shared/types';
 import useTodoStore from 'app/store/useTodoStore';
+
 import {
   StyledSearchInput,
   StyledTable,
